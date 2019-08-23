@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class HandGunDamage : MonoBehaviour {
 
-	//int DamageAmount = 5;
-	//float TargetDistance;
+	int DamageAmount = 5;
 	float AllowedRange = 15;
 
 	public Camera fpsCam;
@@ -16,7 +15,7 @@ public class HandGunDamage : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0)){
 			if(Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRange)){
 
-					Debug.Log(Hit.transform.name);
+					Hit.transform.SendMessage("deductPoints",DamageAmount);
 
 			}
 		}
