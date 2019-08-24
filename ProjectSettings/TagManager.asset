@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemy
   - ammoCollect
+  - doorButton1
   layers:
   - Default
   - TransparentFX
