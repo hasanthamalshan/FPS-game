@@ -6,12 +6,15 @@ public class GunFire : MonoBehaviour {
 	public AudioSource gunsound;
 	public AudioSource reloadsound;
 
+	[SerializeField] GameObject Flash;
+
 	public static bool isrealoading = false;
 
 	void Update () {
 		if(Input.GetMouseButtonDown(0) && isrealoading == false){
 			if(ammoCollect.ammoLoad > 0){
 				gunsound.Play();
+				StartCoroutine("FlashWait",0.1f);
 				GetComponent<Animation>().Play("GunShot");
 				ammoCollect.ammoLoad--;
 			}
@@ -34,6 +37,15 @@ public class GunFire : MonoBehaviour {
 		yield return new WaitForSeconds(time);
 
 		isrealoading = false;
+		
+	}
+	IEnumerator FlashWait(float time){
+
+		Flash.SetActive(true);
+
+		yield return new WaitForSeconds(time);
+		
+		Flash.SetActive(false);
 		
 	}
 }
