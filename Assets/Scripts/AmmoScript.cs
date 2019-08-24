@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class AmmoScript : MonoBehaviour {
 
+	public AudioSource AmmoCollectsound;
 	private void OnTriggerEnter() {
-		ammoCollect.ammo += 10;
+		ammoCollect.ammo += 5;
+		AmmoCollectsound.Play();
 		Destroy(gameObject);
+
 	}
 }
