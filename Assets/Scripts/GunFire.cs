@@ -6,9 +6,12 @@ public class GunFire : MonoBehaviour {
 	public AudioSource gunsound;
 
 	void Update () {
-		if(Input.GetMouseButtonDown(1)){
-			gunsound.Play();
-			GetComponent<Animation>().Play();
+		if(Input.GetMouseButtonDown(0)){
+			if(ammoCollect.ammo > 0){
+				gunsound.Play();
+				GetComponent<Animation>().Play();
+				ammoCollect.ammo--;
+			}
 			
 		}
 	}

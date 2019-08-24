@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CrossAnimate : MonoBehaviour {
-
-	GameObject upMark;
-	GameObject downMark;
-	GameObject leftMark;
-	GameObject rightMark;
+    [SerializeField] GameObject upMark;
+	[SerializeField] GameObject downMark;
+	[SerializeField] GameObject leftMark;
+	[SerializeField] GameObject rightMark;
 
 	void Update () {
 		if(Input.GetMouseButtonDown(0)){
-			upMark.GetComponent<Animation>().Play();
-			downMark.GetComponent<Animation>().Play();
-			leftMark.GetComponent<Animation>().Play();
-			rightMark.GetComponent<Animation>().Play();
+			StartCoroutine("anim",0.1f);
 		}
 	}
 
-	
+	IEnumerator anim(float time){
+		yield return new WaitForSeconds(time);
+		upMark.GetComponent<Animation>().Play();
+		downMark.GetComponent<Animation>().Play();
+		leftMark.GetComponent<Animation>().Play();
+		rightMark.GetComponent<Animation>().Play();
+		
+	}
 }
