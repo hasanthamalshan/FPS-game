@@ -12,10 +12,11 @@ public class HandGunDamage : MonoBehaviour {
 
 	void Update (){
 		RaycastHit Hit;
-		if(Input.GetMouseButtonDown(0)){
+		if(Input.GetMouseButtonDown(1)){
 			if(Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRange)){
-
+				if(Hit.transform.tag == "enemy"){
 					Hit.transform.SendMessage("deductPoints",DamageAmount);
+				}
 
 			}
 		}

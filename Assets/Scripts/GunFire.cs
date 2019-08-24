@@ -6,7 +6,7 @@ public class GunFire : MonoBehaviour {
 	public AudioSource gunsound;
 
 	void Update () {
-		if(Input.GetMouseButtonDown(0)){
+		if(Input.GetMouseButtonDown(1)){
 			gunsound.Play();
 			GetComponent<Animation>().Play();
 			
