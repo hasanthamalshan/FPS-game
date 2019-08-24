@@ -6,9 +6,14 @@ public class AmmoScript : MonoBehaviour {
 
 	public AudioSource AmmoCollectsound;
 	private void OnTriggerEnter() {
-		ammoCollect.ammo += 5;
-		AmmoCollectsound.Play();
-		Destroy(gameObject);
+		if(ammoCollect.ammo < 10){
+			ammoCollect.ammo += 5;
+			AmmoCollectsound.Play();
+			if(ammoCollect.ammo > 10){
+				ammoCollect.ammo = 10;
+			}
+			// Destroy(gameObject);
+		}
 
 	}
 }
