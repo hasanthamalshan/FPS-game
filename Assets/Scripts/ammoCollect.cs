@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ammoCollect : MonoBehaviour {
 
-	public static int ammo = 5;
-	public static int ammoLoad = 10;
+	public static int ammo = 0;
+	public static int ammoLoad = 0;
 	public Text ammoCount;
 	public Text ammoLoaded;
 	void Update () {
