@@ -24,10 +24,16 @@ public class CrossAnimate : MonoBehaviour {
 			StartCoroutine("anim",0.1f);
 		}
 		if((Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRange)) && m9.activeSelf){
-			upImage.GetComponent<Image>().color = new Color32(255,0,0,100);
-			downImage.GetComponent<Image>().color = new Color32(255,0,0,100);
-			leftImage.GetComponent<Image>().color = new Color32(255,0,0,100);
-			rightImage.GetComponent<Image>().color = new Color32(255,0,0,100);
+			 upImage.color = new Color32(255,0,0,255);
+			 downImage.color = new Color32(255,0,0,255);
+			 leftImage.color = new Color32(255,0,0,255);
+			 rightImage.color = new Color32(255,0,0,255);
+		}else{
+			upImage.color = new Color32(255,255,255,255);
+			downImage.color = new Color32(255,255,255,255);
+			leftImage.color = new Color32(255,255,255,255);
+			rightImage.color = new Color32(255,255,255,255);
+
 		}
 	}
 
