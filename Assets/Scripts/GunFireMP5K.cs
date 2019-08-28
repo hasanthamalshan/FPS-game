@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFire : MonoBehaviour {
+public class GunFireMP5K : MonoBehaviour {
 	public AudioSource gunsound;
 	public AudioSource emptygun;
 	public AudioSource reloadsound;
@@ -15,23 +15,23 @@ public class GunFire : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetMouseButtonDown(0) && isrealoading == false){
-			if(ammoCollect.ammoLoadM9 > 0){
+			if(ammoCollect1.ammoLoadMP5K > 0){
 				StartCoroutine("FlashWait",0.1f);
 				gunsound.Play();
-				GetComponent<Animation>().Play("GunShot");
-				ammoCollect.ammoLoadM9--;
+				//GetComponent<Animation>().Play("GunShot");
+				ammoCollect1.ammoLoadMP5K--;
 			}else{
 				emptygun.Play();
 			}
 			
 		}
 		if(Input.GetKeyDown("r")){
-			if(ammoCollect.ammoM9 > 0){
+			if(ammoCollect1.ammoMP5K > 0){
 				StartCoroutine("ReloadWait",1.0f);
 				reloadsound.Play();
-				GetComponent<Animation>().Play("gunReload");
-				ammoCollect.ammoM9--;
-				ammoCollect.ammoLoadM9 = 10;	
+				//GetComponent<Animation>().Play("gunReload");
+				ammoCollect1.ammoMP5K--;
+				ammoCollect1.ammoLoadMP5K = 10;	
 			}	
 		}
 	}

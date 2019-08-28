@@ -8,6 +8,7 @@ TagManager:
   - ammoCollect
   - doorButton1
   - M9
+  - MP5K
   layers:
   - Default
   - TransparentFX
