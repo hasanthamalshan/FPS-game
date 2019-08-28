@@ -7,7 +7,6 @@ public class GunFire : MonoBehaviour {
 	public AudioSource emptygun;
 	public AudioSource reloadsound;
 
-	Animation walking;
 
 	[SerializeField] GameObject Flash;
 

@@ -11,11 +11,12 @@ public class PlayerInstructions : MonoBehaviour
 
     [SerializeField] GameObject m9;
     [SerializeField] GameObject ammoDisplay;
+    [SerializeField] Text gun;
 
     
     public Camera fpsCam;
 
-    float AllowedRange = 1.5f;
+    float AllowedRange = 2f;
 
     void Update()
     {
@@ -34,6 +35,8 @@ public class PlayerInstructions : MonoBehaviour
                          m9.SetActive(true);
                          ammoDisplay.SetActive(true);
                          m9take.SetActive(false);
+                         gun.text="M9";
+                         
                     }
 			    }
 		}else{

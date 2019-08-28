@@ -4,7 +4,8 @@
 AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: GunShot
   serializedVersion: 6
   m_Legacy: 1
@@ -27,15 +28,15 @@ AnimationClip:
         time: 0.033333335
         value: {x: -0.043619394, y: 0, z: 0, w: 0.99904823}
         inSlope: {x: -0.0046938653, y: 0, z: 0, w: 0}
-        outSlope: {x: 0.003911555, y: 0, z: 0, w: 0}
+        outSlope: {x: 0.004805624, y: 0, z: 0, w: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 0.06666667
-        value: {x: 0, y: 0, z: 0, w: 1}
-        inSlope: {x: 0.004119578, y: 0, z: 0, w: 0}
+        value: {x: 0.008726536, y: 0, z: 0, w: 0.9999619}
+        inSlope: {x: 0.0046100463, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
         weightedMode: 0
@@ -96,15 +97,15 @@ AnimationClip:
         time: 0.033333335
         value: -0.043619394
         inSlope: -0.0046938653
-        outSlope: 0.003911555
+        outSlope: 0.004805624
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.06666667
-        value: 0
-        inSlope: 0.004119578
+        value: 0.008726536
+        inSlope: 0.0046100463
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
@@ -214,7 +215,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.06666667
-        value: 1
+        value: 0.9999619
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -252,7 +253,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.06666667
-        value: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -342,5 +343,4 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_GenerateMotionCurves: 0
   m_Events: []
