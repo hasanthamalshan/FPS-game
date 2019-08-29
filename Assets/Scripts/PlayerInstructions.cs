@@ -21,6 +21,7 @@ public class PlayerInstructions : MonoBehaviour
     bool gotmp5k = false;
     [SerializeField] GameObject ammoDisplay;
     [SerializeField] Text gun;
+    [SerializeField] GameObject crossAim;
 
     [SerializeField] GameObject m9ammo;
     [SerializeField] GameObject mp5kammo;
@@ -127,6 +128,11 @@ public class PlayerInstructions : MonoBehaviour
                 m9IconD.SetActive(false);
             }
             
+        }
+        if(gotm9 || gotmp5k){
+            crossAim.SetActive(true);
+        }else{
+            crossAim.SetActive(false);
         }
         
     }

@@ -211,6 +211,7 @@ MonoBehaviour:
   m9: {fileID: 1742025646}
   ammoDisplay: {fileID: 577868200}
   gun: {fileID: 360263473}
+  crossAim: {fileID: 362878824}
   m9ammo: {fileID: 828148970}
   mp5kammo: {fileID: 2042046484}
   m9Loadedammo: {fileID: 1541142278}
@@ -1177,7 +1178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &362878825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2714,10 +2715,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7951,7 +7952,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -241, y: 0}
-  m_SizeDelta: {x: 200, y: 250}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899362694
 MonoBehaviour:
@@ -13603,7 +13604,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -13664,7 +13665,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -241, y: 0}
-  m_SizeDelta: {x: 200, y: 250}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164780641
 MonoBehaviour:
@@ -14301,10 +14302,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -15307,10 +15308,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -15519,17 +15520,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 144faa775bee2e840ae6e430ff7feb1e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 179.94
+      value: 163.8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 144faa775bee2e840ae6e430ff7feb1e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -2.42
+      value: -5.3299866
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 144faa775bee2e840ae6e430ff7feb1e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.84
+      value: 13.949761
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 144faa775bee2e840ae6e430ff7feb1e,
         type: 3}
@@ -16898,7 +16899,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 12, y: -77}
-  m_SizeDelta: {x: 1200, y: 1200}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033214112
 MonoBehaviour:
@@ -16994,10 +16995,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -17055,7 +17056,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 12, y: -77}
-  m_SizeDelta: {x: 1200, y: 1200}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128286386
 MonoBehaviour:
