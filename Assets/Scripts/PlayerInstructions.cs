@@ -12,6 +12,8 @@ public class PlayerInstructions : MonoBehaviour
 
     public  GameObject mp5k;
     public GameObject m9;
+    bool gotm9 = false;
+    bool gotmp5k = false;
     [SerializeField] GameObject ammoDisplay;
     [SerializeField] Text gun;
 
@@ -39,6 +41,7 @@ public class PlayerInstructions : MonoBehaviour
                 else if(Hit.transform.tag == "M9"){
                     instructions.text = "Press E to Take the M9 Hand Gun";
                     if(Input.GetKeyDown("e")){
+                         gotm9 = true;
                          m9.SetActive(true);
                          ammoDisplay.SetActive(true);
                          m9take.SetActive(false);
@@ -50,6 +53,7 @@ public class PlayerInstructions : MonoBehaviour
                 else if(Hit.transform.tag == "MP5K"){
                     instructions.text = "Press E to Take the MP5K Hand Gun";
                     if(Input.GetKeyDown("e")){
+                         gotmp5k = true;
                          mp5k.SetActive(true);
                          ammoDisplay.SetActive(true);
                          mp5ktake.SetActive(false);
@@ -60,7 +64,21 @@ public class PlayerInstructions : MonoBehaviour
 			    }
 		}else{
                     instructions.text = "";
-                }
+        }
+        if(Input.GetKeyDown("1") && gotmp5k && gotm9){
+            m9.SetActive(true);
+           // ammoDisplay.SetActive(true);
+           // m9take.SetActive(false);
+            mp5k.SetActive(false);
+            gun.text="M9";
+        }
+        if(Input.GetKeyDown("2") && gotmp5k && gotm9){
+            mp5k.SetActive(true);
+           // ammoDisplay.SetActive(true);
+           // m9take.SetActive(false);
+            m9.SetActive(false);
+            gun.text="MP5K";
+        }
         if(m9.activeSelf == false && mp5k.activeSelf == true){
             m9ammo.SetActive(false);
             m9Loadedammo.SetActive(false);
