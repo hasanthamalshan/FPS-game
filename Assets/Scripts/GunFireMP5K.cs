@@ -10,16 +10,15 @@ public class GunFireMP5K : MonoBehaviour {
 
 	[SerializeField] GameObject Flash;
 
+	bool isfiring = false;
+
 	public static bool isrealoading = false;
 
 
 	void Update () {
-		if(Input.GetMouseButtonDown(0) && isrealoading == false){
-			if(ammoCollect1.ammoLoadMP5K > 0){
-				StartCoroutine("FlashWait",0.1f);
-				gunsound.Play();
-				//GetComponent<Animation>().Play("GunShot");
-				ammoCollect1.ammoLoadMP5K--;
+		if(Input.GetMouseButton(0) && isrealoading == false && isfiring == false){
+			if(ammoCollect1.ammoLoadMP5K > 0 ){
+				StartCoroutine("Fire",0.1f);
 			}else{
 				emptygun.Play();
 			}
@@ -31,7 +30,7 @@ public class GunFireMP5K : MonoBehaviour {
 				reloadsound.Play();
 				//GetComponent<Animation>().Play("gunReload");
 				ammoCollect1.ammoMP5K--;
-				ammoCollect1.ammoLoadMP5K = 10;	
+				ammoCollect1.ammoLoadMP5K = 100;	
 			}	
 		}
 	}
@@ -52,5 +51,14 @@ public class GunFireMP5K : MonoBehaviour {
 
 		Flash.SetActive(false);
 		
+	}
+	IEnumerator Fire(float time){
+		isfiring = true;
+		StartCoroutine("FlashWait",0.1f);
+		gunsound.Play();
+		//GetComponent<Animation>().Play("GunShot");
+		ammoCollect1.ammoLoadMP5K--;
+		yield return new WaitForSeconds(time);	
+		isfiring = false;
 	}
 }

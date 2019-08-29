@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class ammoCollect : MonoBehaviour {
+public class CollectAmmoM9 : MonoBehaviour {
 
 	public static int ammoM9 = 0;
 	public static int ammoLoadM9 = 0;

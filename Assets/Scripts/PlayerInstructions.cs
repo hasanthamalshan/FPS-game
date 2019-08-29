@@ -15,6 +15,11 @@ public class PlayerInstructions : MonoBehaviour
     [SerializeField] GameObject ammoDisplay;
     [SerializeField] Text gun;
 
+    [SerializeField] GameObject m9ammo;
+    [SerializeField] GameObject mp5kammo;
+    [SerializeField] GameObject m9Loadedammo;
+    [SerializeField] GameObject mp5kLoadedammo;
+
     
     public Camera fpsCam;
 
@@ -56,5 +61,22 @@ public class PlayerInstructions : MonoBehaviour
 		}else{
                     instructions.text = "";
                 }
+        if(m9.activeSelf == false && mp5k.activeSelf == true){
+            m9ammo.SetActive(false);
+            m9Loadedammo.SetActive(false);
+            mp5kammo.SetActive(true);
+            mp5kLoadedammo.SetActive(true);
+        }else if(m9.activeSelf == true && mp5k.activeSelf == false){
+            m9ammo.SetActive(true);
+            m9Loadedammo.SetActive(true);
+            mp5kammo.SetActive(false);
+            mp5kLoadedammo.SetActive(false);
+        }else{
+            m9ammo.SetActive(false);
+            m9Loadedammo.SetActive(false);
+            mp5kammo.SetActive(false);
+            mp5kLoadedammo.SetActive(false);
+        }
+        
     }
 }

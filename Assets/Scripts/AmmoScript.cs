@@ -9,11 +9,11 @@ public class AmmoScript : MonoBehaviour {
 
 	public AudioSource AmmoCollectsound;
 	private void OnTriggerEnter() {
-		if(ammoCollect.ammoM9 < 10 && m9.activeSelf){
-			ammoCollect.ammoM9 += 5;
+		if(CollectAmmoM9.ammoM9 < 10 && m9.activeSelf){
+			CollectAmmoM9.ammoM9 += 5;
 			AmmoCollectsound.Play();
-			if(ammoCollect.ammoM9 > 10){
-				ammoCollect.ammoM9 = 10;
+			if(CollectAmmoM9.ammoM9 > 10){
+				CollectAmmoM9.ammoM9 = 10;
 			}
 			// Destroy(gameObject);
 		}

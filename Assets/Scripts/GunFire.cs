@@ -15,23 +15,23 @@ public class GunFire : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetMouseButtonDown(0) && isrealoading == false){
-			if(ammoCollect.ammoLoadM9 > 0){
+			if(CollectAmmoM9.ammoLoadM9 > 0){
 				StartCoroutine("FlashWait",0.1f);
 				gunsound.Play();
 				GetComponent<Animation>().Play("GunShot");
-				ammoCollect.ammoLoadM9--;
+				CollectAmmoM9.ammoLoadM9--;
 			}else{
 				emptygun.Play();
 			}
 			
 		}
 		if(Input.GetKeyDown("r")){
-			if(ammoCollect.ammoM9 > 0){
+			if(CollectAmmoM9.ammoM9 > 0){
 				StartCoroutine("ReloadWait",1.0f);
 				reloadsound.Play();
 				GetComponent<Animation>().Play("gunReload");
-				ammoCollect.ammoM9--;
-				ammoCollect.ammoLoadM9 = 10;	
+				CollectAmmoM9.ammoM9--;
+				CollectAmmoM9.ammoLoadM9 = 10;	
 			}	
 		}
 	}

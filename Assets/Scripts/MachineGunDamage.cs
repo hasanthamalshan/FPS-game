@@ -12,7 +12,7 @@ public class MachineGunDamage : MonoBehaviour
 
 	void Update (){
 		RaycastHit Hit;
-		if(Input.GetMouseButtonDown(0) && ammoCollect1.ammoLoadMP5K >0){
+		if(Input.GetMouseButton(0) && ammoCollect1.ammoLoadMP5K >0){
 			if(Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRange)){
 				if(Hit.transform.tag == "enemy"){
 					Hit.transform.SendMessage("deductPoints",DamageAmount);	
