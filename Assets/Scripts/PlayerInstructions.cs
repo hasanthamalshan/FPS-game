@@ -10,6 +10,11 @@ public class PlayerInstructions : MonoBehaviour
     [SerializeField] GameObject m9take;
     [SerializeField] GameObject mp5ktake;
 
+    [SerializeField] GameObject m9Icon;
+    [SerializeField] GameObject mp5kIcon;
+    [SerializeField] GameObject mp5kIconD;
+    [SerializeField] GameObject m9IconD;
+
     public  GameObject mp5k;
     public GameObject m9;
     bool gotm9 = false;
@@ -94,6 +99,34 @@ public class PlayerInstructions : MonoBehaviour
             m9Loadedammo.SetActive(false);
             mp5kammo.SetActive(false);
             mp5kLoadedammo.SetActive(false);
+        }
+        // if(gotm9 == true){
+        //     m9IconD.SetActive(true);
+        // }
+        // if(gotmp5k == true){
+        //     mp5kIconD.SetActive(true);
+        // }
+        if(m9.activeSelf == true){
+            m9Icon.SetActive(true);
+            m9IconD.SetActive(false);
+            mp5kIcon.SetActive(false);
+            if(gotmp5k == true){
+                mp5kIconD.SetActive(true);
+            }else{
+                mp5kIconD.SetActive(false);
+            }
+            
+        }
+        if(mp5k.activeSelf == true){
+            mp5kIcon.SetActive(true);
+            mp5kIconD.SetActive(false);
+            m9Icon.SetActive(false);
+            if(gotm9 == true){
+                m9IconD.SetActive(true);
+            }else{
+                m9IconD.SetActive(false);
+            }
+            
         }
         
     }

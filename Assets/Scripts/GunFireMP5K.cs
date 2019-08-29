@@ -20,7 +20,8 @@ public class GunFireMP5K : MonoBehaviour {
 			if(ammoCollect1.ammoLoadMP5K > 0 ){
 				StartCoroutine("Fire",0.1f);
 			}else{
-				emptygun.Play();
+				StartCoroutine("FireEmpty",0.1f);
+				
 			}
 			
 		}
@@ -28,7 +29,7 @@ public class GunFireMP5K : MonoBehaviour {
 			if(ammoCollect1.ammoMP5K > 0){
 				StartCoroutine("ReloadWait",1.0f);
 				reloadsound.Play();
-				//GetComponent<Animation>().Play("gunReload");
+				GetComponent<Animation>().Play("ReloadMP5K");
 				ammoCollect1.ammoMP5K--;
 				ammoCollect1.ammoLoadMP5K = 100;	
 			}	
@@ -56,8 +57,14 @@ public class GunFireMP5K : MonoBehaviour {
 		isfiring = true;
 		StartCoroutine("FlashWait",0.1f);
 		gunsound.Play();
-		//GetComponent<Animation>().Play("GunShot");
+		GetComponent<Animation>().Play("GunfireMP5K");
 		ammoCollect1.ammoLoadMP5K--;
+		yield return new WaitForSeconds(time);	
+		isfiring = false;
+	}
+	IEnumerator FireEmpty(float time){
+		isfiring = true;
+		emptygun.Play();
 		yield return new WaitForSeconds(time);	
 		isfiring = false;
 	}

@@ -13,17 +13,22 @@ public class CrossAnimate : MonoBehaviour {
 	public RawImage downImage;
 	public RawImage leftImage;
 	public RawImage rightImage;
+
 	[SerializeField] GameObject m9;
+	[SerializeField] GameObject mp5k;
+
 	public Camera fpsCam;
 
-    float AllowedRange = 15f;
+    float AllowedRangem9 = 15f;
+	float AllowedRangemp5k = 30f;
 
 	void Update () {
 		RaycastHit Hit;
-		if(Input.GetMouseButtonDown(0)){
-			StartCoroutine("anim",0.1f);
-		}
-		if((Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRange)) && m9.activeSelf){
+		// if(Input.GetMouseButtonDown(0)){
+		// 	StartCoroutine("anim",0.1f);
+		// }
+		if(((Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRangem9)) 
+			&& m9.activeSelf) ||((Physics.Raycast(fpsCam.transform.position , fpsCam.transform.forward , out Hit , AllowedRangemp5k)) && mp5k.activeSelf)){
 			 upImage.color = new Color32(255,0,0,255);
 			 downImage.color = new Color32(255,0,0,255);
 			 leftImage.color = new Color32(255,0,0,255);
