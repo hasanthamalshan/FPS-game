@@ -44,7 +44,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         // Use this for initialization
         private void Start()
-        {
+        {   
+            CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Hardware);
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
